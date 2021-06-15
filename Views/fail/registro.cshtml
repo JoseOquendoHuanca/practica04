@@ -1,0 +1,34 @@
+@model usuario
+<h1>Registra tus mejores imagenes y diviértete.... </h1>
+
+<div asp-validation-summary="All"></div>
+
+<form method="post">
+
+<div class="form-group">
+    <label asp-for="nombre"></label>
+    <input asp-for="nombre" class="form-control"/>
+</div>
+<div class="form-group">
+    <label asp-for="nombreusuario"></label>
+    <input asp-for="nombreusuario" class="form-control"/>
+</div>
+
+
+
+<div class="form-group">
+    <label asp-for="foto"></label>
+    <input asp-for="foto" class="form-control"/>
+</div>
+
+<div class="form-group">
+    <label asp-for="descripcion"></label>
+    <textarea asp-for="descripcion" class="form-control"></textarea>
+</div>
+
+
+
+<button class=" btn btn-danger">Registrar</button>
+
+
+</form>
