@@ -18,16 +18,17 @@ namespace practica04.Controllers
              _context= context;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            var usuario =_context.usuarios.Where(x =>x.fecharegistr < DateTime.Now) .ToList();
+            // var usuario =_context.usuarios.Where(x =>x.fecharegistr < DateTime.Now) .ToList();
+            var usuario =_context.usuarios.OrderByDescending(x =>x.id).ToList();
             return View(usuario);
         }
 
         public IActionResult Privacy()
-        {var usuario =_context.usuarios.Where(x =>x.fecharegistr < DateTime.Now) ;
+        {
+               var usuario =_context.usuarios.OrderByDescending(x =>x.id).ToList();
             return View(usuario);
-           
         }
 
           public IActionResult detalle(){
